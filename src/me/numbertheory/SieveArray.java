@@ -57,8 +57,14 @@ public class SieveArray {
 	
 	
 	public static void main(String[] args) throws LimitExceededException {
-		SieveArray sieve = new SieveArray(10000000);
-		System.out.println(sieve.isPrime(2879));
+		SieveArray sieve = new SieveArray(1000000);
+		//System.out.println(sieve.isPrime(1));
+		int count = 0;
+		for(int i=6;i<1000000;i++) {
+			if(sieve.isPrime(i))
+				count++;
+		}
+		System.out.println(count);
 	}
 
 }
