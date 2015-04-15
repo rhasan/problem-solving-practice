@@ -9,33 +9,43 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.naming.LimitExceededException;
-
-
 
 class Prob543 {
 	public void solution(InputStream inStream) {
 		Scanner in = new Scanner(inStream);
 		
+		
 		SieveArray sieve = new SieveArray(1000000);
+		
 		
 		while(in.hasNext()) {
 			int n = in.nextInt();
 			if(n == 0) break;
+			if(n%2!=0) {
+				System.out.println("Goldbach's conjecture is wrong.");
+			}
+			List<Integer> primes = new ArrayList<Integer>();
+			for(int i = 0; sieve.getIthPrime(i)<=n;i++) {
+				primes.add(sieve.getIthPrime(i));
+			}
 			boolean soln = false;
-			for(int a=2;a<=n;a++) {
+
+			int j=primes.size()-1;
+			int b=primes.get(j);
+			
+			while(b >=primes.get(0) && j>=0) {
+				int a = n-b;
 				if(sieve.isPrime(a)) {
-					for(int b=n;b>=2;b--) {
-						if(sieve.isPrime(b)) {
-							if(n == a+b) {
-								System.out.println(n+" = "+a+" + "+b);
-								soln = true;
-								
-							}
-						}
+					if(n == a+b) {
+						System.out.println(n+" = "+a+" + "+b);
+						soln = true;
+						break;
 					}
 				}
-				if(soln) break;
+				j--;
+				if(j<0)break;
+				b=primes.get(j);
+				
 			}
 			
 			if(soln==false)
@@ -47,13 +57,13 @@ class Prob543 {
 	}
 
 	
-	public static void main(String[] args) throws FileNotFoundException {
-		Prob543 sol = new Prob543();
-
-		FileInputStream fis = new FileInputStream("input/543.txt");
-		sol.solution(fis);
-
-	}		
+//	public static void main(String[] args) throws FileNotFoundException {
+//		Prob543 sol = new Prob543();
+//
+//		FileInputStream fis = new FileInputStream("input/543.txt");
+//		sol.solution(fis);
+//
+//	}		
 }
 
 class SieveArray {
@@ -102,18 +112,22 @@ class SieveArray {
 		return true;
 	}
 	
+	public int getIthPrime(int i) {
+		return primes.get(i);
+	}
+	
 	
 
 }
 
 
-//
-//class Main {
-//
-//	public static void main(String[] args) {
-//		Prob543 sol = new Prob543();
-//
-//		sol.solution(System.in);
-//
-//	}
-//}
+
+class Main {
+
+	public static void main(String[] args) {
+		Prob543 sol = new Prob543();
+
+		sol.solution(System.in);
+
+	}
+}
