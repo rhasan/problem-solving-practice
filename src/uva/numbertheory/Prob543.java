@@ -50,8 +50,6 @@ class Prob543 {
 			
 			if(soln==false)
 				System.out.println("Goldbach's conjecture is wrong.");
-
-			
 			
 		}
 	}
