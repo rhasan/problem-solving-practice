@@ -120,12 +120,12 @@ class SieveArray {
 
 
 
-class Main {
-
-	public static void main(String[] args) {
-		Prob543 sol = new Prob543();
-
-		sol.solution(System.in);
-
-	}
-}
+//class Main {
+//
+//	public static void main(String[] args) {
+//		Prob543 sol = new Prob543();
+//
+//		sol.solution(System.in);
+//
+//	}
+//}
