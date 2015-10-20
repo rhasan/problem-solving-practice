@@ -48,16 +48,16 @@ class Prob591 {
 
 
 
-class Main {
-
-	public static void main(String[] args) throws FileNotFoundException {
-		Prob591 sol = new Prob591();
-
-		sol.solution(new FileInputStream("input/591.txt"));
-		
-
-	}
-}
+//class Main {
+//
+//	public static void main(String[] args) throws FileNotFoundException {
+//		Prob591 sol = new Prob591();
+//
+//		sol.solution(new FileInputStream("input/591.txt"));
+//		
+//
+//	}
+//}
 
 //class Main {
 //
