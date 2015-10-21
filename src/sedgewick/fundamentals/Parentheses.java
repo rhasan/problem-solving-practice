@@ -37,7 +37,6 @@ public class Parentheses {
 	public static void main(String args[]) {
         String s = StdIn.readString();
         StdOut.println(isBalanced(s));
-        
-        
+
 	}
 }
