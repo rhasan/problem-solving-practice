@@ -1,4 +1,4 @@
-package me.designpatterns;
+package swe.designpatterns;
 
 public class Square implements Shape{
 
