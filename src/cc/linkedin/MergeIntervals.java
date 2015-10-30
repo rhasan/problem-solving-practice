@@ -24,10 +24,8 @@ public class MergeIntervals {
 		}
 		@Override
 		public String toString() {
-			
 			return "["+start+", "+end+"]";
 		}
-		
 	}
 	
 	public static void main(String[] args) {
@@ -51,7 +49,6 @@ public class MergeIntervals {
 		for(Interval in:mergedIntervals) {
 			System.out.println(in);
 		}
-		
 	}
 
 	private static SortedSet<Interval> mergeIntervals(SortedSet<Interval> intervals, Interval newInerval) {
@@ -65,7 +62,7 @@ public class MergeIntervals {
 		endSortedIntervals.addAll(intervals);
 		SortedSet<Interval> tailSet = new TreeSet<Interval>(endSortedIntervals.tailSet(newInerval));
 
-		if(headSet.size()>0 && headSet.last().end >= newInerval.start) {
+		if(headSet.size() > 0 && headSet.last().end >= newInerval.start) {
 			newInerval.start = headSet.last().start;
 			headSet.remove(headSet.last());
 		}
