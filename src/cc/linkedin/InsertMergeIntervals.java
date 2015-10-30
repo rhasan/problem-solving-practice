@@ -8,7 +8,7 @@ import java.util.TreeSet;
  * @author rakebulh
  *
  */
-public class MergeIntervals {
+public class InsertMergeIntervals {
 	static class Interval implements Comparable<Interval> {
 
 		int start;
@@ -44,14 +44,14 @@ public class MergeIntervals {
 		System.out.println("Inserting interval:"+newInerval);
 		
 		
-		SortedSet<Interval> mergedIntervals = mergeIntervals(intervals,newInerval);
+		SortedSet<Interval> mergedIntervals = insertMergeIntervals(intervals,newInerval);
 		System.out.println("Result:");
 		for(Interval in:mergedIntervals) {
 			System.out.println(in);
 		}
 	}
 
-	private static SortedSet<Interval> mergeIntervals(SortedSet<Interval> intervals, Interval newInerval) {
+	private static SortedSet<Interval> insertMergeIntervals(SortedSet<Interval> intervals, Interval newInerval) {
 		SortedSet<Interval> headSet = new TreeSet<Interval>(intervals.headSet(newInerval));
 		SortedSet<Interval> endSortedIntervals = new TreeSet<Interval>(new Comparator<Interval>() {
 			@Override
