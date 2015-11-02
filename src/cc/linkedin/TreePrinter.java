@@ -27,7 +27,6 @@ public class TreePrinter {
 			this.dist = INF;
 			this.color = Color.WHITE;
 		}
-		
 	}
 	
 	public void printTree(Node root) {
