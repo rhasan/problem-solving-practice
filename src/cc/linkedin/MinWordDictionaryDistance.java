@@ -9,7 +9,11 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.Set;
-
+/**
+ * http://www.careercup.com/question?id=5728304935993344
+ * @author rakebulh
+ *
+ */
 public class MinWordDictionaryDistance {
 	public static int INF = Integer.MAX_VALUE;
 	enum Color {
