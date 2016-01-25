@@ -4,6 +4,8 @@
 #include <algorithm>    // std::sort
 using namespace std;
 
+#define ALL(x) x.begin(), x.end()
+
 typedef pair<int, int> ii; // we will utilize the natural sort order
 typedef pair<ii, int> iii; // of the primitive data types that we paired
 
@@ -18,7 +20,7 @@ int main() {
 	birthdays.push_back(B); 
 	birthdays.push_back(C);
 
-	sort(birthdays.begin(), birthdays.end()); // that’s all :)
+	sort(ALL(birthdays)); // that’s all :)
 
 	for (int i = 0; i < (int)birthdays.size(); i++) printf("%d.%d.%d\n", birthdays[i].first.first, birthdays[i].first.second, -birthdays[i].second);
 }
