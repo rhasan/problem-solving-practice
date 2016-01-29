@@ -1,4 +1,4 @@
-package uva.math;
+
 import java.io.FileNotFoundException;
 import java.io.FileInputStream;
 
@@ -7,7 +7,7 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 
-class Prob10551 {
+class UVA10551 {
 
 	public void solution(InputStream in) {
 		Scanner sc = new Scanner(in);
@@ -41,11 +41,11 @@ class Prob10551 {
 /** 
  * submit main
  */
-//class Main {
-//
-//	public static void main(String[] args)  {
-//		Prob10551 sol = new Prob10551();
-//		sol.solution(System.in);
-//
-//	}
-//}
+class Main {
+
+	public static void main(String[] args)  {
+		UVA10551 sol = new UVA10551();
+		sol.solution(System.in);
+
+	}
+}
