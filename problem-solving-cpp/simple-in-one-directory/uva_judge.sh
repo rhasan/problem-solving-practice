@@ -1,13 +1,13 @@
 PROB=$1
 echo "Judging UVA problem: "$PROB
-rm -f $PROB
-COMPLIE=$(g++ -o $PROB uva-$PROB.cpp)
+rm -f $PROB.o
+COMPLIE=$(g++ -o $PROB.o uva-$PROB.cpp)
 if [ "$?" != "0" ]
 then
 	echo $COMPLIE
 	exit 1
 fi
-./$PROB < input/$PROB.in > out/my$PROB.out
+./$PROB.o < input/$PROB.in > out/my$PROB.out
 if [ "$?" != "0" ]
 then
 	echo $DIFF
