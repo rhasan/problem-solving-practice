@@ -10,7 +10,6 @@ fi
 ./$PROB.o < input/$PROB.in > out/my$PROB.out
 if [ "$?" != "0" ]
 then
-	echo $DIFF
 	exit 1
 fi
 
