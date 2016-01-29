@@ -7,9 +7,9 @@ then
 	echo $COMPLIE
 	exit 1
 fi
-./a.out < input/$PROB.in > output/my$PROB.out
+./a.out < input/$PROB.in > out/my$PROB.out
 
-DIFF=$(diff output/my$PROB.out output/$PROB.out)
+DIFF=$(diff output/my$PROB.out out/$PROB.out)
 
 if [ "$DIFF" != "" ] 
 then
