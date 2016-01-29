@@ -1,6 +1,12 @@
 PROB=$1
 echo "Judging UVA problem: "$PROB
-g++ uva-$PROB.cpp
+rm -f a.out
+COMPLIE=$(g++ uva-$PROB.cpp)
+if [ "$?" != "0" ]
+then
+	echo $COMPLIE
+	exit 1
+fi
 ./a.out < input/$PROB.in > output/my$PROB.out
 
 DIFF=$(diff output/my$PROB.out output/$PROB.out)
