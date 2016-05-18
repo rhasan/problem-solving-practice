@@ -1,0 +1,6 @@
+C:\Users\Rakebul\Documents\code\problem-solving-practice\problem-solving-c#\Fundamentals\Fundamentals\bin\Debug\Fundamentals.exe.config
+C:\Users\Rakebul\Documents\code\problem-solving-practice\problem-solving-c#\Fundamentals\Fundamentals\bin\Debug\Fundamentals.exe
+C:\Users\Rakebul\Documents\code\problem-solving-practice\problem-solving-c#\Fundamentals\Fundamentals\bin\Debug\Fundamentals.pdb
+C:\Users\Rakebul\Documents\code\problem-solving-practice\problem-solving-c#\Fundamentals\Fundamentals\obj\Debug\Fundamentals.csprojResolveAssemblyReference.cache
+C:\Users\Rakebul\Documents\code\problem-solving-practice\problem-solving-c#\Fundamentals\Fundamentals\obj\Debug\Fundamentals.exe
+C:\Users\Rakebul\Documents\code\problem-solving-practice\problem-solving-c#\Fundamentals\Fundamentals\obj\Debug\Fundamentals.pdb
