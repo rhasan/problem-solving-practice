@@ -46,5 +46,15 @@ namespace Fundamentals
             }
             return item;
         }
+
+        public bool isEmpty()
+        {
+            return size() == 0;
+        }
+
+        public int size()
+        {
+            return N;
+        }
     }
 }

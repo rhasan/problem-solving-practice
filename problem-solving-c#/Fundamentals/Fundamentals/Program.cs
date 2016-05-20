@@ -10,11 +10,19 @@ namespace Fundamentals
     {
         static void Main(string[] args)
         {
-            IStack<string> stack = new ResizingStack<string>();
+            IStack<string> rStack = new ResizingStack<string>();
             string[] words = Console.In.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            foreach (string word in words) 
+            pushPopPrint(rStack, words);
+
+            IStack<string> lStack = new LinkedStack<string>();
+            pushPopPrint(lStack, words);
+        }
+
+        private static void pushPopPrint(IStack<string> stack, string[] words)
+        {
+            foreach (string word in words)
             {
-                if (word == "-") 
+                if (!stack.isEmpty() && word == "-")
                 {
                     Console.Write(stack.pop());
                     Console.Write(" ");
@@ -23,8 +31,8 @@ namespace Fundamentals
                 {
                     stack.push(word);
                 }
-                //Console.WriteLine(word);
             }
+            Console.WriteLine("");
         }
     }
 }
