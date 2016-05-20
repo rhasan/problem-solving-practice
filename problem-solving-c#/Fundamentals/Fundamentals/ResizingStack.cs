@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Fundamentals
 {
-    class Stack<Item>
+    class ResizingStack<Item>:IStack<Item>
     {
         Item[] m_items;
         int N;
-        public Stack()
+        public ResizingStack()
         {
             m_items = new Item[1];
             N = 0;

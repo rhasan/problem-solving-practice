@@ -10,9 +10,10 @@ namespace Fundamentals
     {
         static void Main(string[] args)
         {
-            Stack<string> stack = new Stack<string>();
+            IStack<string> stack = new ResizingStack<string>();
             string[] words = Console.In.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            foreach(string word in words) {
+            foreach (string word in words) 
+            {
                 if (word == "-") 
                 {
                     Console.Write(stack.pop());
